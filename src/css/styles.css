@@ -1,5 +1,19 @@
-body{
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Stilar för body*/
+
+body, html{
     margin: 0;
     padding: 0;
     background-color: #F6DED8;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*Stilar för header*/
+
+header{
+    margin-top: 0;
+    padding: 0;
+    background-color: #d2665a;
 }
