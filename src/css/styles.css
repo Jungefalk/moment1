@@ -1,9 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*Stilar för body*/
 
-body, html{
+body,
+html {
     margin: 0;
     padding: 0;
     background-color: #F6DED8;
@@ -12,8 +12,36 @@ body, html{
 
 /*Stilar för header*/
 
-header{
+header {
     margin-top: 0;
     padding: 0;
     background-color: #d2665a;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 1em;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    padding: 1em;
+}
+
+header li a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+    font-weight: 500;
+}
+
+header li a:hover{
+    text-decoration: underline 2px;
 }
