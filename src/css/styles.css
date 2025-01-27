@@ -104,3 +104,27 @@ footer p{
     line-height: 1.7em;
     color: #f8eeeb;
 }
+
+/*Stilar för små skärmar*/
+@media (max-width: 600px){
+
+    .img-container{
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    header li{
+        padding: 0.5em;
+    }
+
+    header li a{
+        font-size: 1em;
+    }
+
+    main p {
+        font-size: 1.3em;
+        line-height: 1.7em;
+        margin: 1em;
+    }
+}
