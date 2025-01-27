@@ -66,3 +66,21 @@ main p {
     line-height: 1.7em;
     margin: 2em;
 }
+
+/*stilar för img-container*/
+
+.img-container{
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    padding: 1em;
+}
+
+.img-container picture{
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.img-container picture img{
+    width: 100%;
+    border-radius: 5px;
+}
