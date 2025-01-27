@@ -1,5 +1,130 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Stilar för body*/
+
+body,
+html {
     margin: 0;
     padding: 0;
     background-color: #F6DED8;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*Stilar för .current*/
+.current{
+    text-decoration: underline 2px;
+}
+
+/*Stilar för header*/
+
+header {
+    margin-top: 0;
+    padding: 0;
+    background-color: #d2665a;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 1em;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    padding: 1em;
+}
+
+header li a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+    font-weight: 500;
+}
+
+header li a:hover {
+    text-decoration: underline 2px;
+}
+
+/*Stilar för main*/
+
+main {
+    background-color: #f8eeeb;
+    max-width: 1000px;
+    margin: auto;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+main p {
+    font-size: 1.3em;
+    line-height: 1.7em;
+    margin: 2em;
+}
+
+/*stilar för img-container*/
+
+.img-container{
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    padding: 1em;
+}
+
+.img-container picture{
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.img-container picture img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+/*Stilar för footer*/
+
+footer{
+    background-color:#d2665a;
+    padding: 2em;
+    margin-top: 2em;
+}
+
+footer p{
+    margin: 0;
+    text-align: center;
+    line-height: 1.7em;
+    color: #f8eeeb;
+}
+
+/*Stilar för små skärmar*/
+@media (max-width: 600px){
+
+    .img-container{
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    header li{
+        padding: 0.5em;
+    }
+
+    header li a{
+        font-size: 1em;
+    }
+
+    main p {
+        font-size: 1.3em;
+        line-height: 1.7em;
+        margin: 1em;
+    }
 }
