@@ -84,3 +84,18 @@ main p {
     width: 100%;
     border-radius: 5px;
 }
+
+/*Stilar för footer*/
+
+footer{
+    background-color: #B82132;
+    padding: 2em;
+    margin-top: 2em;
+}
+
+footer p{
+    margin: 0;
+    text-align: center;
+    line-height: 1.7em;
+    color: #f8eeeb;
+}
