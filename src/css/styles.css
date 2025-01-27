@@ -10,6 +10,11 @@ html {
     font-family: "Montserrat", sans-serif;
 }
 
+/*Stilar för .current*/
+.current{
+    text-decoration: underline 2px;
+}
+
 /*Stilar för header*/
 
 header {
@@ -50,7 +55,7 @@ header li a:hover {
 
 main {
     background-color: #f8eeeb;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
     padding: 1em;
     margin-top: 2em;
