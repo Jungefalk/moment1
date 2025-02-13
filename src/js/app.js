@@ -26,30 +26,43 @@ function init() {
 };
 
 //funktion för att ladda in schemat
-function loadCourses() {
+async function loadCourses() {
+    try {
+        const response = await fetch("https://webbutveckling.miun.se/files/ramschema_ht24.json");
+        if (!response.ok) {
+            throw new Error("Fel vid anslutning");
+        }
+
+        courseInfo = await response.json()
+        readCourses(courseInfo)
+        console.log(courseInfo)
+
+    } catch (error) {
+        console.error("Det uppstod ett fel:", error.message);
+    }
 
 };
 
 //funktion som skriver ut schemat
-function readCourses() {
+function readCourses(courseInfo) {
 };
 
 //funktion som sorterar på kurskod
 function sortCourseCode() {
-console.log("sorterar kurskod")
+    console.log("sorterar kurskod")
 };
 
 //funktion som sorterar på kursnamn
 function sortCourseName() {
-console.log("sorterar kursnamn")
+    console.log("sorterar kursnamn")
 };
 
 //Funktion som sorterar progression
 function sortProgression() {
-console.log("sorterar progression")
+    console.log("sorterar progression")
 };
 
 //funktion för filtrering
-function filterCourses(){
+function filterCourses() {
     console.log("filtrerar kurser")
 }
