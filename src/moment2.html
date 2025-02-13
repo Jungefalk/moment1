@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 2</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/app.js" defer></script>
+</head>
+
+<body>
+    <!-- Header start -->
+    <header>
+        <h1>DT211G</h1>
+        <!-- Main navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="images.html">Bilder</a></li>
+                <li><a href="about.html">Arbetsprocess</a></li>
+                <li><a class="current" href="moment2.html">Ramschema</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Header end -->
+
+<!-- Main start -->
+<main>
+    <h2>Webbutveckling - Ramschema</h2>
+
+    <div>
+        <h3>Sök på kurs:</h3>
+        <input type="text" id="search" placeholder="Sök...">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="hover" id="courseCode">Kurskod</th>
+                <th class="hover" id="courseName">Kursnamn</th>
+                <th class="hover" id="progression">Progression</th>
+            </tr>
+        </thead>
+
+        <tbody id="courseTable">
+        </tbody>
+
+    </table>
+
+</main>
+<!-- Main end -->
+
+</body>
+</html>
