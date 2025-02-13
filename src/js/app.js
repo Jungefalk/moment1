@@ -80,6 +80,9 @@ function sortCourseName() {
 //Funktion som sorterar progression
 function sortProgression() {
     console.log("sorterar progression")
+
+    const sortedProgression = courseInfo.sort((a, b) => a.progression > b.progression ? 1 : -1);
+    readCourses(sortedProgression);
 };
 
 //funktion för filtrering
