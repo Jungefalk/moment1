@@ -21,8 +21,6 @@ searchEl.addEventListener("input", filterCourses);
 //Funktion för sidladdning
 function init() {
 
-    console.log("sidan har laddat klart")
-
     loadCourses();
 };
 
@@ -36,7 +34,6 @@ async function loadCourses() {
 
         courseInfo = await response.json()
         readCourses(courseInfo)
-        console.log(courseInfo)
 
     } catch (error) {
         console.error("Det uppstod ett fel:", error.message);
@@ -62,7 +59,6 @@ function readCourses(courseInfo) {
 
 //funktion som sorterar på kurskod
 function sortCourseCode() {
-    console.log("Sorterar kurskod")
 
     const sortedCourseCode = courseInfo.sort((a, b) => a.code > b.code ? 1 : -1);
     readCourses(sortedCourseCode);
@@ -71,7 +67,6 @@ function sortCourseCode() {
 
 //funktion som sorterar på kursnamn
 function sortCourseName() {
-    console.log("sorterar kursnamn")
 
     const sortedCourseName = courseInfo.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
     readCourses(sortedCourseName);
@@ -79,7 +74,6 @@ function sortCourseName() {
 
 //Funktion som sorterar progression
 function sortProgression() {
-    console.log("sorterar progression")
 
     const sortedProgression = courseInfo.sort((a, b) => a.progression > b.progression ? 1 : -1);
     readCourses(sortedProgression);
@@ -87,7 +81,6 @@ function sortProgression() {
 
 //funktion för filtrering
 function filterCourses() {
-    console.log("filtrerar kurser")
 
     const filteredCourses = courseInfo.filter(course =>
         course.code.toLowerCase().includes(searchEl.value.toLowerCase()) ||
