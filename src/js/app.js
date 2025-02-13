@@ -62,6 +62,10 @@ function readCourses(courseInfo) {
 
 //funktion som sorterar på kurskod
 function sortCourseCode() {
+    console.log("Sorterar kursnamn")
+
+    const sortedCourseCode = courseInfo.sort((a, b) => a.code > b.code ? 1 : -1);
+    readCourses(sortedCourseCode);
 
 };
 
