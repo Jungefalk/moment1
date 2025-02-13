@@ -8,12 +8,14 @@ let courseInfo = [];
 let courseCodeEl = document.getElementById("courseCode");
 let courseNameEl = document.getElementById("courseName");
 let progressionEl = document.getElementById("progression");
+let searchEl = document.getElementById("search");
 
 //Händelsehanterare
 window.addEventListener("load", init);
 courseCodeEl.addEventListener("click", sortCourseCode);
 courseNameEl.addEventListener("click", sortCourseName);
 progressionEl.addEventListener("click", sortProgression);
+searchEl.addEventListener("input", filterCourses);
 
 //Funktion för sidladdning
 function init() {
@@ -30,9 +32,7 @@ function loadCourses() {
 
 //funktion som skriver ut schemat
 function readCourses() {
-
 };
-
 
 //funktion som sorterar på kurskod
 function sortCourseCode() {
@@ -48,3 +48,8 @@ console.log("sorterar kursnamn")
 function sortProgression() {
 console.log("sorterar progression")
 };
+
+//funktion för filtrering
+function filterCourses(){
+    console.log("filtrerar kurser")
+}
