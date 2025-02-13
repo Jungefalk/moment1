@@ -9,6 +9,7 @@ let courseCodeEl = document.getElementById("courseCode");
 let courseNameEl = document.getElementById("courseName");
 let progressionEl = document.getElementById("progression");
 let searchEl = document.getElementById("search");
+let courseTableEl = document.getElementById("courseTable");
 
 //Händelsehanterare
 window.addEventListener("load", init);
@@ -45,11 +46,23 @@ async function loadCourses() {
 
 //funktion som skriver ut schemat
 function readCourses(courseInfo) {
+
+    //Rensa DOM
+    courseTableEl.innerHTML = "";
+
+    //loopa data
+    courseInfo.forEach(info => {
+        courseTableEl.innerHTML += "<tr>" +
+            "<td>" + `${info.code}` + "</td>" +
+            "<td>" + `${info.coursename}` + "</td>" +
+            "<td>" + `${info.progression}` + "</td>" +
+            "</tr>"
+    })
 };
 
 //funktion som sorterar på kurskod
 function sortCourseCode() {
-    console.log("sorterar kurskod")
+
 };
 
 //funktion som sorterar på kursnamn
