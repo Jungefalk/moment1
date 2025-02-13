@@ -88,4 +88,12 @@ function sortProgression() {
 //funktion för filtrering
 function filterCourses() {
     console.log("filtrerar kurser")
+
+    const filteredCourses = courseInfo.filter(course =>
+        course.code.toLowerCase().includes(searchEl.value.toLowerCase()) ||
+        course.coursename.toLowerCase().includes(searchEl.value.toLowerCase()) ||
+        course.progression.toLowerCase().includes(searchEl.value.toLowerCase())
+    );
+
+    readCourses(filteredCourses);
 }
