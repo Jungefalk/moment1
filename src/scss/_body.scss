@@ -1,0 +1,9 @@
+@use "base";
+
+body {
+    background-color: base.$primary-color;
+    color: base.$text-color;
+    font-family: base.$font-style;
+    margin: 0;
+    padding: 0;
+}
