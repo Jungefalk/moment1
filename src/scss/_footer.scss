@@ -1,0 +1,9 @@
+@use "base";
+
+footer{
+    background-color: base.$secondary-color;
+    color: base.$third-color;
+    text-align: center;
+    padding: 1em;
+    font-size: 1.2em;
+}
