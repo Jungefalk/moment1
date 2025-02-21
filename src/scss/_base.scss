@@ -23,3 +23,9 @@ $secondary-color-dm: #222831;
     margin-bottom: $margin;
 }
 
+//placeholder för bakgrund- och textfärg
+
+%headerFooterStyles{
+    background-color: $secondary-color;
+    color: $third-color;
+}

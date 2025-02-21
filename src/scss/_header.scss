@@ -1,18 +1,13 @@
 @use "base";
 
-header {
+.mainHeader {
+    @extend %headerFooterStyles;
+}
+
+h1 {
     margin: 0;
-    padding: 0;
-    top: 100%;
-    background-color: base.$secondary-color;
-
-    h1 {
-        margin: 0;
-        padding: 1em;
-        color: base.$third-color;
-        text-align: center;
-    }
-
+    padding: 1em;
+    text-align: center;
 }
 
 nav {
