@@ -16,3 +16,10 @@ $text-color-dm: #EEEEEE;
 $secondary-color-dm: #222831;
 
 
+//Mixin för bilder
+@mixin images($size, $radius, $margin){
+    width: $size;
+    border-radius: $radius;
+    margin-bottom: $margin;
+}
+
