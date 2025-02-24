@@ -29,10 +29,20 @@ main {
     max-width: 100%;
 }
 
-.ghostContainer {
+.ghostContainer1 {
     background-color: base.$orange-color;
     max-width: 100%;
     padding: 2em;
+}
+
+.ghostContainer2 {
+    @extend .ghostContainer1;
+    background-color: base.$blue-color;
+}
+
+.ghostContainer3 {
+    @extend .ghostContainer1;
+    background-color: base.$green-color;
 }
 
 .ghost1 {
@@ -40,6 +50,20 @@ main {
     margin: 0 auto;
     width: 200px;
     height: 200px;
-    text-align: center;
     animation: floatingGhost 8s alternate infinite;
+}
+
+.ghost2 {
+    @extend .ghost1;
+    opacity: 100%;
+    animation: none;
+}
+
+.ghost2:hover {
+    animation: disapperingGhost 5s alternate;
+}
+
+
+.ghost3 {
+    @extend .ghost1;
 }
