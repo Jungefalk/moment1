@@ -1,10 +1,11 @@
 @use "base";
+@use "animation";
 
-main{
+main {
     margin: 0 auto;
     max-width: 900px;
-    
-    h2{
+
+    h2 {
         text-align: center;
         margin-top: 2em;
         margin-bottom: 2em;
@@ -13,12 +14,66 @@ main{
 
 }
 
-.imageSquare{
+.imageSquare {
     @include base.images(100%, 2em, false)
 }
 
-.imageOval{
+.imageOval {
     @include base.images(100%, 2em, true)
 }
 
 
+//Moment 4
+
+.animationMain {
+    max-width: 100%;
+}
+
+
+.ghostContainer1 {
+    background-color: base.$orange-color;
+    max-width: 100%;
+    padding: 2em;
+}
+
+.ghostContainer1 h2{
+    margin-top: 1em
+}
+
+.ghostContainer2 {
+    @extend .ghostContainer1;
+    background-color: base.$blue-color;
+}
+
+.ghostContainer3 {
+    @extend .ghostContainer1;
+    background-color: base.$green-color;
+}
+
+.ghost1 {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    animation: floatingGhost 8s alternate infinite;
+}
+
+.ghost2 {
+    @extend .ghost1;
+    opacity: 100%;
+    animation: none;
+}
+
+.ghost2:hover {
+    animation: disapperingGhost 3s forwards;
+}
+
+
+.ghost3 {
+    @extend .ghost1;
+    animation: none,
+}
+
+.ghost3:active{
+    animation: fleeingGhost 1s forwards;
+}

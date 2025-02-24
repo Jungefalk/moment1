@@ -16,7 +16,6 @@ $text-color-dm: #EEEEEE;
 $secondary-color-dm: darken($secondary-color, 20%);
 $third-color-dm: lighten($third-color, 40%);
 
-
 //Mixin för bilder
 @mixin images($size, $margin, $round) {
     width: $size;
@@ -35,4 +34,11 @@ $third-color-dm: lighten($third-color, 40%);
     background-color: $secondary-color;
     color: $third-color;
 }
+
+//Moment 4
+
+$main-color: #F8F5E9;
+$orange-color: #DF6D14;
+$blue-color: #525FE1;
+$green-color: #219C90;
 
