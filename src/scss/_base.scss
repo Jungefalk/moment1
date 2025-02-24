@@ -17,10 +17,16 @@ $secondary-color-dm: #222831;
 
 
 //Mixin för bilder
-@mixin images($size, $radius, $margin) {
+@mixin images($size, $margin, $round) {
     width: $size;
-    border-radius: $radius;
     margin-bottom: $margin;
+ 
+    @if $round{
+        border-radius: 50%;
+
+    }@else{
+    border-radius: 5px;
+    }
 }
 
 //placeholder för bakgrund- och textfärg för header och footer

@@ -13,6 +13,10 @@ main{
 
 }
 
-.imageStockholm{
-        @include base.images(100%, 50%, 2em)
+.imageSquare{
+    @include base.images(100%, 2em, false)
+}
+
+.imageOval{
+    @include base.images(100%, 2em, true)
 }
