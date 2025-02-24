@@ -4,6 +4,8 @@ body {
     background-color: base.$primary-color;
     color: base.$text-color;
     font-family: base.$font-style;
+    font-size: 1.3em;
+    line-height: 1.7em;
     margin: 0;
     padding: 0;
 }
@@ -20,5 +22,9 @@ body {
     .mainHeader, .mainFooter{
         background-color: base.$secondary-color-dm;
     }
+.mainHeader h1, .mainHeader a, .mainFooter p{
+    color: base.$third-color-dm;
+}
+
 
 }

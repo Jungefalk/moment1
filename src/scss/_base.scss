@@ -13,7 +13,8 @@ $secondary-color: #393E46;
 //Mörkt läge
 $primary-color-dm: #393E46;
 $text-color-dm: #EEEEEE;
-$secondary-color-dm: #222831;
+$secondary-color-dm: darken($secondary-color, 20%);
+$third-color-dm: lighten($third-color, 40%);
 
 
 //Mixin för bilder
