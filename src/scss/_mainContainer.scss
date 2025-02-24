@@ -1,10 +1,11 @@
 @use "base";
+@use "animation";
 
-main{
+main {
     margin: 0 auto;
     max-width: 900px;
-    
-    h2{
+
+    h2 {
         text-align: center;
         margin-top: 2em;
         margin-bottom: 2em;
@@ -13,24 +14,32 @@ main{
 
 }
 
-.imageSquare{
+.imageSquare {
     @include base.images(100%, 2em, false)
 }
 
-.imageOval{
+.imageOval {
     @include base.images(100%, 2em, true)
 }
 
 
 //Moment 4
 
-.animationMain{
+.animationMain {
+    max-width: 100%;
+}
+
+.ghostContainer {
     background-color: base.$orange-color;
     max-width: 100%;
     padding: 2em;
 }
 
-.ghostContainer{
+.ghost1 {
+    display: block;
+    margin: 0 auto;
     width: 200px;
     height: 200px;
+    text-align: center;
+    animation: floatingGhost 8s alternate infinite;
 }
