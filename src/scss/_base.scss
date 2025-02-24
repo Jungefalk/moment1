@@ -17,15 +17,30 @@ $secondary-color-dm: #222831;
 
 
 //Mixin för bilder
-@mixin images($size, $radius, $margin){
+@mixin images($size, $radius, $margin) {
     width: $size;
     border-radius: $radius;
     margin-bottom: $margin;
 }
 
-//placeholder för bakgrund- och textfärg
+//placeholder för bakgrund- och textfärg för header och footer
 
-%headerFooterStyles{
+%headerFooterStyles {
     background-color: $secondary-color;
     color: $third-color;
+}
+
+// media queriy - mörkt tema
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: $primary-color-dm;
+        color: $text-color-dm;
+    }
+
+    .mainHeader, .mainFooter{
+        background-color: $secondary-color-dm;
+    }
+
 }
