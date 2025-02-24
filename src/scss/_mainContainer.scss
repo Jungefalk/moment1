@@ -36,6 +36,10 @@ main {
     padding: 2em;
 }
 
+.ghostContainer1 h2{
+    margin-top: 1em
+}
+
 .ghostContainer2 {
     @extend .ghostContainer1;
     background-color: base.$blue-color;
