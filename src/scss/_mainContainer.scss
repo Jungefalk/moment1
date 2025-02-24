@@ -1,0 +1,24 @@
+@use "base";
+
+main{
+    margin: 0 auto;
+    max-width: 900px;
+    
+    h2{
+        text-align: center;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        font-size: 1.8em;
+    }
+
+}
+
+.imageSquare{
+    @include base.images(100%, 2em, false)
+}
+
+.imageOval{
+    @include base.images(100%, 2em, true)
+}
+
+

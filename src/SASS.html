@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="scss/main.scss">
+</head>
+
+<body>
+    <header class="mainHeader">
+        <h1>SASS - Moment 3</h1>
+        <nav>
+            <ul>
+                <li> <a href="startsida.html">Startsida</a></li>
+                <li> <a href="#">Alt 2</a></li>
+                <li> <a href="#">Alt 3 </a></li>
+                <li> <a href="#">Alt 4 </a></li>
+                <li> <a href="#">Alt 5 </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Komma igång med arbetet</h2>
+            <p>Att komma igång med SASS var relativt enkelt och logiskt. Utmaningen var att länka ihop de olika
+                sass-filerna korrekt med varandra, men då parcel själv automatiskt identifierar och kompilerar
+                SASS-filerna till en enda CSS fil så var det inget större problem.
+
+            <p>Jag utgick ifrån kravlistan i uppgiftsbeskrivningen och föreläsningen för att strukturera min kod.</p>
+
+            <p>Först definerade jag variabler för mörkt ljust färgtema. Jag använde color-functions för att justera
+                färgerna i det mörka temat.</p>
+
+            <p>Jag använde på mixins och if/else-satser på bilderna. Mixins för att sätta en gemensam width och margin
+                på bilderna och if/esle-satser för att anpassa formerna.</p>
+
+            <p>Eftersom headern och footern slulle ha samma text och bakgrundsfärg så använde jag placeholders och
+                extend för att undvika DRY.</p>
+
+            <p>Jag använde nesting på navigeringen i headern och fem olika partial för att strukturera upp koden.</p>
+        </article>
+        <article>
+            <h2>Fördelar och nackdelar med sass</h2>
+            <p>Jag ser stora fördelar med att använda SASS i större projekt. Redundans och flistorlekarna kan minskas i
+                och med att det går att återanvända samma bit kod flera gånger och att parcel automatiskt sätter ihop de
+                elementen då.</p>
+
+                <p>Koden blir mer strukturerad. Det går enklare att hitta men också att sätta sig in i ett projekt som
+                kanske är helt nytt för en.</p>
+
+                <p>Skulle man ha en dålig kontrast på en färg exempelvis så räcker det att dra i färgen i den deklarerade
+                variablen för träffa alla element som har färgen än att man ska behöva leta runt i en stor css-fil och
+                klippa och klistra in rätt färgkod på varje element.</p>
+
+                <p>Den enda Nackdelen som jag ser med SASS är att det kanske blir lite överdrivet, krångligare och kanske
+                mer tidskrävande än nödvändigt om det bara ska användas i väldigt små projekt.</p>
+        </article>
+    </main>
+    <footer class="mainFooter">
+        <p>Av: Caroline Jungefalk Palmgren</p>
+        <p>Kurs: DT211G Datateknik GR (B), Frontend-baserat webbutveckling</p>
+    </footer>
+</body>
+
+</html>

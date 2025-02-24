@@ -1,0 +1,9 @@
+@use "base";
+@use "header";
+
+.mainFooter {
+    @extend %headerFooterStyles;
+    text-align: center;
+    padding: 1em;
+    font-size: 1.2em;
+}

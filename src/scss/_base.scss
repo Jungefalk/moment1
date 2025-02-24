@@ -1,0 +1,38 @@
+
+
+//Variabler
+$font-style: 'inter', 'sans-serif';
+$third-color: #00ADB5;
+
+//Ljust läge
+$primary-color: #EEEEEE;
+$text-color: #222831;
+$secondary-color: #393E46;
+
+
+//Mörkt läge
+$primary-color-dm: #393E46;
+$text-color-dm: #EEEEEE;
+$secondary-color-dm: darken($secondary-color, 20%);
+$third-color-dm: lighten($third-color, 40%);
+
+
+//Mixin för bilder
+@mixin images($size, $margin, $round) {
+    width: $size;
+    margin-bottom: $margin;
+ 
+    @if $round{
+        border-radius: 50%;
+
+    }@else{
+    border-radius: 5px;
+    }
+}
+
+//placeholder för bakgrund- och textfärg för header och footer
+%headerFooterStyles {
+    background-color: $secondary-color;
+    color: $third-color;
+}
+

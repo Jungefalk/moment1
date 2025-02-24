@@ -1,0 +1,37 @@
+@use "base";
+
+.mainHeader {
+    @extend %headerFooterStyles;
+}
+
+h1 {
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+
+    ul {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        padding-bottom: 1em;
+    }
+
+    li {
+        display: inline-block;
+        margin: 1em;
+    }
+
+    a {
+        text-decoration: none;
+        color: base.$third-color;
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+    a:hover{
+        text-decoration: underline 2px;
+    }
+}
