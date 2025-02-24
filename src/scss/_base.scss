@@ -1,6 +1,6 @@
 
-//Variabler
 
+//Variabler
 $font-style: 'inter', 'sans-serif';
 $third-color: #00ADB5;
 
@@ -30,23 +30,8 @@ $secondary-color-dm: #222831;
 }
 
 //placeholder för bakgrund- och textfärg för header och footer
-
 %headerFooterStyles {
     background-color: $secondary-color;
     color: $third-color;
 }
 
-// media queriy - mörkt tema
-
-@media (prefers-color-scheme: dark) {
-
-    body {
-        background-color: $primary-color-dm;
-        color: $text-color-dm;
-    }
-
-    .mainHeader, .mainFooter{
-        background-color: $secondary-color-dm;
-    }
-
-}

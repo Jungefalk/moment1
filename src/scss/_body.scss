@@ -7,3 +7,18 @@ body {
     margin: 0;
     padding: 0;
 }
+
+// media query - mörkt tema
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: base.$primary-color-dm;
+        color: base.$text-color-dm;
+    }
+
+    .mainHeader, .mainFooter{
+        background-color: base.$secondary-color-dm;
+    }
+
+}
