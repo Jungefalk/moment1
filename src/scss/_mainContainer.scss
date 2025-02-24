@@ -29,6 +29,7 @@ main {
     max-width: 100%;
 }
 
+
 .ghostContainer1 {
     background-color: base.$orange-color;
     max-width: 100%;
@@ -60,10 +61,15 @@ main {
 }
 
 .ghost2:hover {
-    animation: disapperingGhost 5s alternate;
+    animation: disapperingGhost 3s forwards;
 }
 
 
 .ghost3 {
     @extend .ghost1;
+    animation: none,
+}
+
+.ghost3:active{
+    animation: fleeingGhost 1s forwards;
 }
