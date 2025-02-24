@@ -19,12 +19,23 @@ body {
         color: base.$text-color-dm;
     }
 
-    .mainHeader, .mainFooter{
+    .mainHeader,
+    .mainFooter {
         background-color: base.$secondary-color-dm;
     }
-.mainHeader h1, .mainHeader a, .mainFooter p{
-    color: base.$third-color-dm;
+
+    .mainHeader h1,
+    .mainHeader a,
+    .mainFooter p {
+        color: base.$third-color-dm;
+    }
+
+
 }
 
+//Moment 4
 
+.animationBody {
+    background-color: base.$main-color;
+    font-family: base.$font-style;
 }

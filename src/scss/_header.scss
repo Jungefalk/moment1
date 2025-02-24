@@ -31,7 +31,14 @@ nav {
         font-size: 1.2em;
     }
 
-    a:hover{
+    a:hover {
         text-decoration: underline 2px;
     }
+}
+
+//moment 4 header
+
+.animationHeader h1,
+.animationHeader nav a {
+    color: base.$text-color;
 }
