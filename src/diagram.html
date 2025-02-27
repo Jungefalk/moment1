@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="scss/main.scss">
     <script type="module" src="js/moment5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <!--  header start  -->
     <header class="mainHeader">
@@ -30,7 +33,13 @@
 
     <!--  main start  -->
     <main>
+<div>
+    <canvas id="barChart"></canvas>
+</div>
 
+<div>
+    <canvas id="pieChart"></canvas>
+</div>
     </main>
     <!--  main end  -->
 
@@ -41,4 +50,5 @@
     </footer>
     <!--  main end  -->
 </body>
+
 </html>

@@ -1,6 +1,5 @@
 "use strict";
 
-
 // Tom array för att lagra json-data
 let courseInfo = [];
 
