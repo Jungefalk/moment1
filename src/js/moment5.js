@@ -19,10 +19,14 @@ async function fetchData() {
         if (!response.ok) {
             throw new Error("Det blev ett fel vid anslutiningen");
         }
-        const data = await response.json()
-        console.log(data)
+        const jsonData = await response.json()
+
+        jsonData.forEach(data => {
+            console.log(data)
+        });
 
     } catch (error) {
         console.log("Ett fel uppstod:", error.message);
     };
 };
+
