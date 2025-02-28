@@ -100,6 +100,8 @@ function readPieChart(jsonData) {
     programApplications = sortedPrograms.map(program => program.applicantsTotal)
     console.log(programApplications)
 
+    
+
 };
 
 
