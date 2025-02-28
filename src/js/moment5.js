@@ -12,7 +12,7 @@ let filteredCourses = [];
 let filteredPrograms = [];
 let sortedCourses = [];
 let sortedPrograms = [];
-let couseNames = [];
+let courseNames = [];
 let courseApplications = [];
 let programNames = [];
 let programApplications = [];
@@ -25,24 +25,35 @@ async function fetchData() {
             throw new Error("Det blev ett fel vid anslutiningen");
         }
         const jsonData = await response.json()
-
-        // filtrera ut kurs/program
-        filteredCourses = jsonData.filter(data => data.type === "Kurs")
-        console.log(filteredCourses);
-
-        filteredPrograms = jsonData.filter(data => data.type === "Program")
-        console.log(filteredPrograms);
-
-        //stortera och plocka ut mest pupulära - lagra i array
-        sortedCourses = filteredCourses.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 6)
-        console.log(sortedCourses)
-
-        sortedPrograms = filteredPrograms.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 5)
-        console.log(sortedPrograms)
-        
+        readBarChart(jsonData);
+        readPieChart(jsonData);
 
     } catch (error) {
         console.log("Ett fel uppstod:", error.message);
     };
 };
+
+function readBarChart(jsonData) {
+
+    // filtrera ut Kurser
+    filteredCourses = jsonData.filter(data => data.type === "Kurs")
+    console.log(filteredCourses);
+
+    // Sortera och plocka ut 6 mest populära kurser
+    sortedCourses = filteredCourses.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 6)
+    console.log(sortedCourses)
+};
+
+function readPieChart(jsonData) {
+
+    // filtrera ut program
+    filteredPrograms = jsonData.filter(data => data.type === "Program")
+    console.log(filteredPrograms);
+
+    // Sortetra och plocka ut 5 mest populära program
+    sortedPrograms = filteredPrograms.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 5)
+    console.log(sortedPrograms)
+
+};
+
 
