@@ -8,10 +8,10 @@ const pieChartEl = document.getElementById("pieChart");
 window.addEventListener("load", fetchData);
 
 //Tomma arrayer för att lagra data
-const mostPopularCourses = [];
-const mostPopularPrograms = [];
-const courses = [];
-const programs = [];
+let mostPopularCourses = [];
+let mostPopularPrograms = [];
+let courses = [];
+let programs = [];
 
 
 async function fetchData() {
@@ -23,17 +23,17 @@ async function fetchData() {
         const jsonData = await response.json()
 
         // filtrera ut kurs/program
-        const courses = jsonData.filter(data => data.type === "Kurs")
+        courses = jsonData.filter(data => data.type === "Kurs")
         console.log(courses);
 
-        const programs = jsonData.filter(data => data.type === "Program")
+        programs = jsonData.filter(data => data.type === "Program")
         console.log(programs);
 
         //stortera och plocka ut mest pupulära - lagra i array
-        const mostPopularCourses = courses.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 6)
+        mostPopularCourses = courses.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 6)
         console.log(mostPopularCourses)
 
-        const mostPopularPrograms = programs.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 5)
+        mostPopularPrograms = programs.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 5)
         console.log(mostPopularPrograms)
         
 
