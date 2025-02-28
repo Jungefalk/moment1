@@ -42,6 +42,13 @@ function readBarChart(jsonData) {
     // Sortera och plocka ut 6 mest populära kurser
     sortedCourses = filteredCourses.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 6)
     console.log(sortedCourses)
+
+    //Dela upp namn och antal ansökningar i varsin en array
+    courseNames = sortedCourses.map(course => course.name);
+    console.log(courseNames);
+    courseApplications = sortedCourses.map(course => course.applicantsTotal);
+    console.log(courseApplications);
+
 };
 
 function readPieChart(jsonData) {
@@ -53,6 +60,12 @@ function readPieChart(jsonData) {
     // Sortetra och plocka ut 5 mest populära program
     sortedPrograms = filteredPrograms.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 5)
     console.log(sortedPrograms)
+
+    //Dela upp namn och antal ansökningar i varsin en array
+    programNames = sortedPrograms.map(program => program.name);
+    console.log(programNames)
+    programApplications = sortedPrograms.map(program => program.applicantsTotal)
+    console.log(programApplications)
 
 };
 
