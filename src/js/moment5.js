@@ -43,12 +43,45 @@ function readBarChart(jsonData) {
     sortedCourses = filteredCourses.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 6)
     console.log(sortedCourses)
 
-    //Dela upp namn och antal ansökningar i varsin en array
+    //Dela upp namn och antal ansökningar i separata arrayer
     courseNames = sortedCourses.map(course => course.name);
     console.log(courseNames);
     courseApplications = sortedCourses.map(course => course.applicantsTotal);
     console.log(courseApplications);
 
+    //Skapa bar chart med apexcharts
+    const mostPopularCourses = {
+        chart: {
+            type: 'bar',
+            height: 500,
+        },
+        plotOptions: {
+            bar: {
+                borderRadius: 10,
+                borderRadiusApplication: 'end'
+            }
+        },
+        colors: ["#F28585"],
+        series: [{
+            name: 'Antal ansökningar 2023',
+            data: courseApplications
+        }],
+        xaxis: {
+            categories: courseNames,
+            labels: {
+                rotate: -35,
+                style: {
+                    fontSize: "10px",
+                    fontWeight: "bold"
+                }
+            }
+        }
+
+    }
+
+    const chart = new ApexCharts(barChartEl, mostPopularCourses);
+
+    chart.render();
 };
 
 function readPieChart(jsonData) {
@@ -61,7 +94,7 @@ function readPieChart(jsonData) {
     sortedPrograms = filteredPrograms.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 5)
     console.log(sortedPrograms)
 
-    //Dela upp namn och antal ansökningar i varsin en array
+    //Dela upp namn och antal ansökningar i separata arrayer
     programNames = sortedPrograms.map(program => program.name);
     console.log(programNames)
     programApplications = sortedPrograms.map(program => program.applicantsTotal)
