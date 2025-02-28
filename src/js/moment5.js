@@ -46,7 +46,7 @@ function readBarChart(jsonData) {
     //Dela upp namn och antal ansökningar i separata arrayer
     courseNames = sortedCourses.map(course => course.name);
     console.log(courseNames);
-    courseApplications = sortedCourses.map(course => course.applicantsTotal);
+    courseApplications = sortedCourses.map(course => Number(course.applicantsTotal));
     console.log(courseApplications);
 
     //Skapa bar chart med apexcharts
@@ -76,8 +76,7 @@ function readBarChart(jsonData) {
                 }
             }
         }
-
-    }
+    };
 
     const chart = new ApexCharts(barChartEl, mostPopularCourses);
 
@@ -97,10 +96,19 @@ function readPieChart(jsonData) {
     //Dela upp namn och antal ansökningar i separata arrayer
     programNames = sortedPrograms.map(program => program.name);
     console.log(programNames)
-    programApplications = sortedPrograms.map(program => program.applicantsTotal)
+    programApplications = sortedPrograms.map(program => Number(program.applicantsTotal))
     console.log(programApplications)
 
-    
+        const mostPopularPrograms = {
+            series: programApplications,
+            chart: {
+            type: 'pie',
+          },
+          labels: programNames,
+          };
+  
+          const chart = new ApexCharts(pieChartEl, mostPopularPrograms);
+          chart.render();
 
 };
 
