@@ -1,7 +1,6 @@
 "use strict";
 
-//Hämta idm
+//Hämta id:n
 
-let searchInputEl = document.getElementById("searchInput");
-let searchButtonEl = document.getElementById("searchButton");
-let mapEl = document.getElementById("map");
+let mapsInputEL = document.getElementById("mapsInput");
+let mapsButtonEL = document.getElementById("mapsButton")
