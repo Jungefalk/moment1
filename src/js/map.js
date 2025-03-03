@@ -12,11 +12,12 @@ let map;
 
 async function initMap() {
 
-    let map;
+    let startPosition = { lat: 59.325695, lng: 18.071869}
+
     const { Map } = await google.maps.importLibrary("maps");
 
     map = new Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
+        center: startPosition,
         zoom: 8,
     });
 }
