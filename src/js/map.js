@@ -40,9 +40,17 @@ async function fetchLocation() {
         //skriv över och lagra nya koordinater
         coordinates = [Number(locationData[0].lat), Number(locationData[0].lon)];
 
-        map.setView(coordinates, 14);
+        updateMap()
 
     } catch (error) {
         console.error("Ett fel uppstod:", error.message);
     };
 };
+
+//funktion som uppdaterar kartan och lägger till marker
+function updateMap() {
+
+    map.setView(coordinates, 14);
+    let marker = L.marker(coordinates).addTo(map);
+
+}
