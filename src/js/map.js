@@ -1,19 +1,38 @@
 "use strict";
 
-//Variabler 
+
+/**
+ * @global 
+ * @type {string} Lagrar inmatat sökord.
+ */
 let searchedLocation = "";
+
+/**
+ * @global
+ * @type {array} Lagrar latitud och longitud i en array.
+ */
 let coordinates = [59.32465564032536, 18.06971032425927];
+
+/**
+ * @global 
+ * @type {object} Leaflet karta 
+ */
 let map = 0;
 
 //Hämta id:n
+/** @type {HTMLinputElement} Hämtar in input-element för sökord */
 let mapsInputEl = document.getElementById("mapsInput");
+/** @type {HTMLButtonElement} Hämtar in knapp-element för sökfunktion */
 let mapsButtonEl = document.getElementById("mapsButton");
 
 //Händelsehanterare
 window.addEventListener("load", loadMap);
 mapsButtonEl.addEventListener("click", fetchLocation);
 
-//Funktion som laddar in kartan
+/**
+ * Funktion som laddar in leaflet kartan från open street map.
+ * @function
+ */
 function loadMap() {
 
     map = L.map('map').setView(coordinates, 14);
@@ -34,10 +53,15 @@ function loadMap() {
 
 }
 
-//Funktion som hämtar data från nominatim och översätter sökord till koordinater
+/**
+ * Funktion som hämtar in data från Nominatim API som baserat på sökord översätter dessa till koorinater.
+ * @async
+ * @function
+ */
+
 async function fetchLocation() {
 
-    //lagra sökord i variabel
+    //lagra sökord från input
     searchedLocation = mapsInputEl.value;
 
     try {
@@ -57,7 +81,10 @@ async function fetchLocation() {
     };
 };
 
-//funktion som uppdaterar kartan och lägger till marker
+/**
+ * funktion som uppdaterar kartan baserat på de nya koordinaterna från Nomantine API och adderar en markör till den eftersökta platsen
+ * @function
+ */
 function updateMap() {
 
     map.setView(coordinates, 14);
