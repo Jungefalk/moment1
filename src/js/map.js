@@ -3,6 +3,7 @@
 //Variabler 
 let searchedLocation = "";
 let coordinates = [59.325695, 18.071869];
+let map = 0;
 
 //Hämta id:n
 let mapsInputEl = document.getElementById("mapsInput");
@@ -15,7 +16,7 @@ mapsButtonEl.addEventListener("click", fetchLocation);
 //Funktion som laddar in kartan
 function loadMap() {
 
-    const map = L.map('map').setView(coordinates, 14);
+    map = L.map('map').setView(coordinates, 14);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -38,7 +39,8 @@ async function fetchLocation() {
 
         //skriv över och lagra nya koordinater
         coordinates = [Number(locationData[0].lat), Number(locationData[0].lon)];
-        console.log(coordinates)
+
+        map.setView(coordinates, 14);
 
     } catch (error) {
         console.error("Ett fel uppstod:", error.message);
