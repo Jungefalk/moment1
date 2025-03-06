@@ -4,12 +4,12 @@
 let searchedLocation = [59.325695, 18.071869];
 
 //Hämta id:n
-let searchInputEl = document.getElementById("searchInput");
-let searchButtonEL = document.getElementById("searchButton");
+let mapsInputEl = document.getElementById("mapsInput");
+let mapsButtonEl = document.getElementById("mapsButton");
 
 //Händelsehanterare
 window.addEventListener("load", loadMap);
-searchButtonEL.addEventListener("click", fetchLocation);
+mapsButtonEl.addEventListener("click", fetchLocation);
 
 //Funktion som laddar in kartan
 function loadMap(){
