@@ -11,10 +11,16 @@ let searchButtonEL = document.getElementById("searchButton");
 window.addEventListener("load", loadMap);
 searchButtonEL.addEventListener("click", fetchLocation);
 
+//Funktion som laddar in kartan
+function loadMap(){
 
-const map = L.map('map').setView(searchedLocation, 14);
+    const map = L.map('map').setView(searchedLocation, 14);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
+console.log("Kartan har laddat in")
+}
+
