@@ -13,7 +13,7 @@ window.addEventListener("load", loadMap);
 mapsButtonEl.addEventListener("click", fetchLocation);
 
 //Funktion som laddar in kartan
-function loadMap(){
+function loadMap() {
 
     const map = L.map('map').setView(coordinates, 14);
 
@@ -25,7 +25,23 @@ function loadMap(){
     console.log("Kartan har laddat in")
 }
 
+//Funktion som hämtar data från nominatim och översätter sökord till koordinater
 async function fetchLocation() {
-    
+
+    //lagra sökord i variabel
+    searchedLocation = mapsInputEl.value;
+
+    try {
+        const response = await fetch(`https://nominatim.openstreetmap.org/search.php?q=${searchedLocation}&format=jsonv2`);
+        if (!response.ok) {
+            throw new Error("Fel vid anslutningen");
+        }
+        const locationData = await response.json();
+
+        console.log(locationData)
+
+    } catch (error) {
+        console.error("Ett fel uppstod:", error.message);
+    };
 };
 
