@@ -2,7 +2,7 @@
 
 //Variabler 
 let searchedLocation = "";
-let coordinates = [59.325695, 18.071869];
+let coordinates = [59.32465564032536, 18.06971032425927];
 let map = 0;
 
 //Hämta id:n
@@ -18,10 +18,20 @@ function loadMap() {
 
     map = L.map('map').setView(coordinates, 14);
 
+    const circle = L.circle([59.32465564032536, 18.06971032425927], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 100
+    }).addTo(map);
+
+    circle.bindPopup("Här bor jag! :)")
+
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+
 }
 
 //Funktion som hämtar data från nominatim och översätter sökord till koordinater
