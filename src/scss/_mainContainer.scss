@@ -77,3 +77,28 @@ main {
 .ghost3:active{
     animation: fleeingGhost 1s forwards;
 }
+
+//Moment 5
+
+.mapContainer{
+    padding: 2em;
+}
+
+.mapContainer input{
+ display: block;
+ margin: 0.5em auto;
+ width: 50%;
+ padding: 0.5em;
+ border: solid rgba(0, 0, 0, 0.42) 1px;
+ border-radius: 5px;
+}
+
+.mapContainer button{
+    display: block;
+    margin: 1em auto;
+    width: 20%;
+    padding: 0.5em;
+    border: solid rgba(0, 0, 0, 0.42) 1px;
+    border-radius: 5px;
+    background-color: #f285858b;
+}

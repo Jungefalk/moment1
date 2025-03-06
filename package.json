@@ -12,8 +12,13 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
+    "jsdoc": "^4.0.4",
     "parcel": "^2.13.3",
     "sharp": "^0.33.5"
+  },
+  "dependencies": {
+    "apexcharts": "^4.5.0",
+    "chart.js": "^4.4.8"
   },
   "dependencies": {
     "svgo": "^3.3.2"

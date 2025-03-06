@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startsida</title>
+    <title>Diagram </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="scss/main.scss">
+    <script type="module" src="js/diagram.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
 <body>
+    <!--  header start  -->
     <header class="mainHeader">
-        <h1>Startsida - Moment 3</h1>
+        <h1>Diagram - Moment 5</h1>
         <nav>
             <ul>
                 <li> <a href="startsida.html">Startsida</a></li>
@@ -26,16 +29,25 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h2>Bilder på Stockholm</h2>
-        <img class="imageOval" src="images/image6.jpg" alt="bild över mariaberget">
-        <img class="imageSquare" src="images/image7.jpg" alt="bild över gamla stan">
-    </main>
+    <!--  header end  -->
 
+    <!--  main start  -->
+    <main>
+
+        <h2>Topp 6 sökta kurserna på MIUN 2023</h2>
+        <div id="barChart"></div>
+
+        <h2>Topp 5 sökta programmen på MIUN 2023</h2>
+        <div id="pieChart"></div>
+    </main>
+    <!--  main end  -->
+
+    <!--  footer start  -->
     <footer class="mainFooter">
         <p>Av: Caroline Jungefalk Palmgren</p>
         <p>Kurs: DT211G Datateknik GR (B), Frontend-baserat webbutveckling</p>
     </footer>
+    <!--  main end  -->
 </body>
 
 </html>
