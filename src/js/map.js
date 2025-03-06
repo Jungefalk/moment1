@@ -24,3 +24,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 console.log("Kartan har laddat in")
 }
 
+async function fetchLocation() {
+     
+}
+
