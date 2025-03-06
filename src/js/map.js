@@ -21,8 +21,6 @@ function loadMap() {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-
-    console.log("Kartan har laddat in")
 }
 
 //Funktion som hämtar data från nominatim och översätter sökord till koordinater
@@ -38,10 +36,11 @@ async function fetchLocation() {
         }
         const locationData = await response.json();
 
-        console.log(locationData)
+        //skriv över och lagra nya koordinater
+        coordinates = [Number(locationData[0].lat), Number(locationData[0].lon)];
+        console.log(coordinates)
 
     } catch (error) {
         console.error("Ett fel uppstod:", error.message);
     };
 };
-
